@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <style>
+        .active {
+            background-color: #422AD5;
+            color: #fff;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .login-hidden {
+            display: none !important;
+        }
+    </style>
+    
+    <nav id="navbar" class="p-4 login-hidden">
+        <div class="flex justify-between">
+            <div class="logo flex items-center">
+                <span class="text-xl font-bold">English</span><img src="assets/logo.png" alt="image"><span class="text-xl font-bold">Janala</span>
+            </div>
+            <div>
+                <ul class="flex gap-3 items-center">
+                    <li><a href="#faq" class="btn border border-[#422AD5] bg-white text-[#422AD5] hover:bg-[#422AD5] hover:text-white">Faq</a></li>
+                    <li><a href="#main-container" class="btn border border-[#422AD5] bg-white text-[#422AD5] hover:bg-[#422AD5] hover:text-white">Lessons</a></li>
+                    <li><button class="btn border border-[#422AD5] bg-white text-[#422AD5] hover:bg-[#422AD5] hover:text-white">Logout</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner-section py-[100px] px-5">
+        <div class="grid grid-cols-12 items-center">
+            <div class="col-span-7">
+                <div class="banner-content max-w-[660px]">
+                    <h1 class="text-5xl font-bold mb-4">English Is Easy!!</h1>
+                    <p class="text-xl mb-5">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                    <form id="login-form">
+                        <fieldset class="fieldset">
+
+                            <input
+                                id="user-name"
+                                type="text"
+                                class="input"
+                                placeholder="Enter Your Name"
+                                required
+                            />
+
+                            <input
+                                id="pin-number"
+                                type="password"
+                                class="input"
+                                placeholder="Enter 4 digit PIN"
+                                maxlength="4"
+                                inputmode="numeric"
+                                pattern="[0-9]{4}"
+                                required
+                            />
+
+                            <button
+                                type="submit"
+                                class="btn btn-neutral bg-blue-700 mt-4 inline-block w-[120px] border-none"
+                            >
+                                Get Started
+                            </button>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="col-span-5">
+                <div class="banner-image">
+                    <img src="assets/man-image.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="button-container" class="button-section py-5 flex justify-center gap-5 login-hidden">
+        <!-- <button id="all-btn" onclick="loadLesson()" class="btn border border-[#422AD5] bg-white text-[#422AD5] hover:bg-[#422AD5] hover:text-white">All</button> -->
+    </section>
+
+    <section class="main-section w-11/12 mx-auto grid grid-cols-3 gap-5 login-hidden" id="main-container">
+        <div class="text-center col-span-full flex flex-col justify-center items-center py-[60px]">
+            <img class="w-[120px]" src="assets/alert-error.png" alt="image">
+            <span>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</span>
+            <h2 class="text-2xl">নেক্সট Lesson এ যান</h2>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-area py-[150px] px-5 login-hidden">
+        <div class="section-title">
+            <h2 class="text-5xl mb-10">Frequently Asked Questions</h2>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">1.How can I start learning English on this website?</div>
+            <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">2.Is this website free to use?</div>
+            <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">3.Do I need to create an account?</div>
+            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">4.How can I build my English vocabulary?</div>
+            <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">5.Do you offer certificates for completed courses?</div>
+            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+        </div>
+    </section>
+
+    <section id="footer" class="footer-area py-[100px] px-5 border-t login-hidden">
+        <div class="grid grid-cols-2">
+            <div class="footer-content">
+                <div class="logo flex items-center">
+                    <span class="text-xl font-bold">English</span><img src="assets/logo.png" alt="image"><span class="text-xl font-bold">Janala</span>
+                </div>
+                <span>ইংরেজি শিখুন সহজে</span>
+                <p>Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div class="social-list justify-self-end">
+                <span>Follow us</span>
+                <ul class="flex gap-3">
+                    <li><img src="./assets/fb-thumb.png" alt="image"></li>
+                    <li><img src="./assets/youtube-thumb.png" alt="image"></li>
+                    <li><img src="./assets/instagram-thumb.png" alt="image"></li>
+                    <li><img src="./assets/github-thumb.png" alt="image"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+    <dialog id="word_details" class="modal">
+        <div class="modal-box">
+            <div id="details-containe">
+                
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    
+    <script src="./script/index.js"></script>
+
+</body>
+</html>
